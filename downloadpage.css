@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   word-wrap: break-word;
+  background-color: rgb(255, 255, 255);
 }
 a {
   color: rgb(26, 115, 232);
@@ -63,6 +64,8 @@ a {
 .dot-icon {
   width: 18px;
   height: 18px;
+  position: absolute;
+  
 }
 .title-container {
   width: 45%;
@@ -135,8 +138,68 @@ span.title {
 .file-icon-dot-icon-container {
   margin: 21px;
 }
-input{
+.input{
   margin-left: -62%;
   outline: none;
  padding-left: 50px;
+}
+.me{
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.form{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50vh;
+  height: 50vh;
+  background-color: rgb(217, 217, 217);
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+.form>a{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+  background-color: aqua;
+}
+
+.save{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  background-color: rgb(255, 207, 32);
+  color: red;
+}
+
+.input2{
+  width: 200px;
+  margin-left: 50px;
+}
+
+.click{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.click>a{
+  padding: 10px;
+  background-color: aliceblue;
+
+}
+
+#show:target{
+  display: flex;
 }
