@@ -42,10 +42,15 @@ a {
   width: 15px;
   height: 15px;
   padding: 10px;
+  position: absolute;
+  left: 28%;
+
 }
 .search-title {
   color: rgb(176, 176, 176);
   font-size: 12px;
+  left: 39%;
+  position: absolute;
 }
 .header-right-container {
   width: 27.5%;
@@ -129,4 +134,9 @@ span.title {
 }
 .file-icon-dot-icon-container {
   margin: 21px;
+}
+input{
+  margin-left: -62%;
+  outline: none;
+ padding-left: 50px;
 }
