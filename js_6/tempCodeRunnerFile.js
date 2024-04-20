@@ -1,0 +1,1 @@
+write(filePath).then((data)=>data)

@@ -1,0 +1,1 @@
+    result[category].push(name);

@@ -1,37 +1,5 @@
 const fs = require('fs');
 
-function sqArray(arr, callback) {
-    if (!Array.isArray(arr)) {
-        return "Please provide an array";
-    }
-    let result = [];
-    for (let i = 0; i < arr.length; i++) {
-        result.push(callback(arr[i]));
-    }
-    return result;
-}
-
-let number = [1, 2, 3, 4, 5];
-function square(num) {
-    return num * num;
-}
-console.log(sqArray(number, square));
-
-
-function arrayEventNum(arr, eventNum) {
-    const evenNumbers = [];
-    for (const num of arr) {
-        if (eventNum(num)) {
-            evenNumbers.push(num);
-        }
-    }
-    return evenNumbers;
-}
-const numbers = [1, 2, 3, 4, 5, 6];
-const eventNum = (num) => num % 2 === 0;
-const evenFilteredNumbers = arrayEventNum(numbers, eventNum);
-console.log(evenFilteredNumbers);
-
 
 function readFileAsync(filepath, callback) {
     fs.readFile(filepath, 'utf8', (e, data) => {
