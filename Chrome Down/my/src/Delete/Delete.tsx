@@ -13,10 +13,10 @@ const Delete = ({ setData, idToDelete,getData, btn_up }: { setData: any; idToDel
   function handleDelete() {
     const newData = getData.filter((p:any) => p.id !== idToDelete);
     console.log(data2);
+    
     setData((prevData: any) => newData);
     setshow_del(false)
 
-    
   }
 
   return (
@@ -25,7 +25,7 @@ const Delete = ({ setData, idToDelete,getData, btn_up }: { setData: any; idToDel
       {
         show_del&& <div>
            
-            <div className='flex flex-col justify-center items-center gap-10 w-[40vh] h-[30vh] absolute left-[40%] top-[30%] bg-slate-300 '>
+            <div className='flex flex-col justify-center items-center gap-10 w-[40vh] h-[30vh] fixed left-[40%] top-[30%] bg-slate-300 '>
                  <h1>Do you Want to delete ?</h1>
                  
                  <div className='flex gap-10 ' >
