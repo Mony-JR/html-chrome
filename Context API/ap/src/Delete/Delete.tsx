@@ -11,7 +11,7 @@ const Delete = () => {
         const newData=data.filter((p:any)=>p.id!==getID)
         setShow_del(false)
         console.log(newData);
-        setData(newData)
+        setData(newData) 
         setDel(false)
         setUpdate(false)
         setChange(true)
