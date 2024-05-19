@@ -19,6 +19,7 @@ export interface TypeofFetching{
     }
     return fectDATA.json()
   }
+  
   export async function Show_more(id:any,more:any):Promise<TypeofFetching>{
     const fectDATA=await fetch (`https://6645712ab8925626f891e228.mockapi.io/kk/?page=${id}&limit=${more}`)
     if(!fectDATA.ok){

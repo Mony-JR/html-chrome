@@ -7,19 +7,22 @@ import { MdOutlineReadMore } from "react-icons/md";
 
 
 const Page = () => {
-  const [limit,setLimit]=useState<number>(5)
-  const [data, setData] = useState<TypeofFetching|undefined>();
+  const [limit,setLimit]=useState<number>(1)
+  const [data, setData] = useState<TypeofFetching[]>([]);
+  const [j,jj]=useState<boolean>(true)
 
   console.log(data);
 
   useEffect(()=>{
-    async function getData(){
-      const apiData=await Show_more(1,limit)
-      setData(apiData)
+   async function getData(){
+      const apiData:any=await Show_more(limit,5)
+      {j&& setData(()=>[...apiData]); jj(false) }
+      {!j&& setData((prevData) => [...prevData, ...apiData]);}
+
     }
     getData()
+    
   },[limit])
-  
 
 
   return (
@@ -29,7 +32,7 @@ const Page = () => {
           <MapDATA name={item?.name} id={item?.id} avatar={item.avatar} />
         </div>
       ))}
-      <button onClick={()=>setLimit(limit+5)}
+      <button onClick={()=>setLimit(limit+1)}
       className='text-5xl'><MdOutlineReadMore /></button>
     </div>
   );
