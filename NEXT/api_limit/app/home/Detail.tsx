@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import { TypeofFetching } from '../FectDATA'
+import { IUsers } from '@/utils/FetchData'
 
 
-const Detail = ({ name, id, avatar,createAt }: TypeofFetching) => {
+
+const Detail = ({ name, id, avatar,createAt }: IUsers) => {
   return (
     <div>
        <div className='flex rounded-3xl bg-red-300 justify-center flex-col gap-10 items-center w-[40vh] h-[50vh] '>

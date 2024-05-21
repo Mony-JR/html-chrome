@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["cloudflare-ipfs.com"], // Add the domain here
+    domains: ["cloudflare-ipfs.com"],
   },
     async redirects() {
         return [
